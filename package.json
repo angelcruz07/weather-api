@@ -4,7 +4,7 @@
 	"description": "Api de reto junior en hola mundo",
 	"main": "index.js",
 	"scripts": {
-		"test": "./node_modules/.bin/mocha"
+		"test": "node node_modules/mocha/bin/mocha weather/**/*.test.js test"
 	},
 	"author": "",
 	"license": "ISC",
