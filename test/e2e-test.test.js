@@ -4,7 +4,7 @@ const app = require('../App').app
 
 chai.use(chaiHttp)
 
-describe('Suit of test api response Hello Word', () => {
+describe('Suit of test api response with Hello Word', () => {
 	it('Should return Hello World', (done) => {
 		chai
 			.request(app)
