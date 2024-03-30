@@ -7,7 +7,6 @@ const citiesDatabase = {
 const citiesArray = Object.values(citiesDatabase)
 
 const getCities = () => {
-	console.log('Getting cities:', citiesArray)
 	return citiesArray
 }
 
