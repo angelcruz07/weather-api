@@ -5,7 +5,7 @@ const app = require('../../App').app
 chai.use(chaiHttp)
 
 describe('Suit of test endpoint /cities', () => {
-	it('Should return cities available', function (done) {
+	it('Should return cities available of the database', function (done) {
 		this.timeout(5000)
 		chai
 			.request(app)
@@ -17,4 +17,5 @@ describe('Suit of test endpoint /cities', () => {
 				done()
 			})
 	})
+	//? Todo: Crate test for the methods remaining
 })
