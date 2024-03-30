@@ -4,13 +4,16 @@ const app = require('../../App').app
 
 chai.use(chaiHttp)
 
-describe('Suit of test endpoint weather', () => {
-	it('Should return Hello World', (done) => {
+describe('Suit of test endpoint /cities', () => {
+	it('Should return cities available', (done) => {
 		chai
 			.request(app)
-			.get('/')
+			.get('/cities')
 			.end((err, res) => {
-				chai.assert.equal(res.text, 'Hello World!')
+				// Esperar una respuesta con un array de ciudades
+				chai.expect(res).to.have.status(200)
+				chai.expect(res).to.be.json
+				chai.expect(res.body).to.be.an('array').that.is.not.empty
 				done()
 			})
 	})

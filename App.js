@@ -5,14 +5,14 @@ const app = express()
 const port = 3000
 
 // Routes
-weatherRoutes = require('./weather/weather').router
+citiesRoutes = require('./cities/cities.router').router
 
 // Route get
 app.get('/', (req, res) => {
 	res.status(200).send('Hello World!')
 })
 
-app.use('/weather', weatherRoutes)
+app.use('/cities', citiesRoutes)
 
 app.listen(port, () => {
 	console.log(`Server listening on port ${port}`)
