@@ -1,4 +1,5 @@
 const express = require('express')
+const bodyParser = require('body-parser')
 
 // App
 const app = express()
@@ -6,6 +7,8 @@ const port = 3000
 
 // Routes
 citiesRoutes = require('./cities/cities.router').router
+
+app.use(bodyParser.json())
 
 // Route get
 app.get('/', (req, res) => {

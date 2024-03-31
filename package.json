@@ -4,12 +4,15 @@
 	"description": "Api de reto junior en hola mundo",
 	"main": "index.js",
 	"scripts": {
-		"test": "node node_modules/mocha/bin/mocha cities/**/*.test.js tools/**/*.test.js"
+		"test": "dotenv -e .env.test node node_modules/mocha/bin/mocha cities/**/*.test.js tools/**/*.test.js"
 	},
 	"author": "",
 	"license": "ISC",
 	"dependencies": {
+		"axios": "^1.6.8",
 		"body-parser": "^1.20.2",
+		"dotenv": "^16.4.5",
+		"dotenv-cli": "^7.4.1",
 		"express": "^4.19.2"
 	},
 	"devDependencies": {
